@@ -5,6 +5,9 @@ $(function() {
     const logoContent= $('aside').find('.inner-page-logo');
 
     menuItems.click(function(e) {
+        if(!$(this).data('open')) {
+            e.preventDefault();
+        }
         
         menuItems.removeClass('selected');
         $(this).addClass('selected');
