@@ -5,7 +5,7 @@ $(function() {
     const logoContent= $('aside').find('.inner-page-logo');
 
     menuItems.click(function(e) {
-        if(!$(this).data('open')) {
+        if(!$(this).data('content')) {
             e.preventDefault();
         }
         
