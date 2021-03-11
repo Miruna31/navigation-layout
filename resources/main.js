@@ -13,7 +13,7 @@ $(function() {
         $("#" + $(this).data('content')).removeClass('hidden');
 
         logoContent.addClass('hidden');
-        $("." + $(this).data('content')).removeClass('hidden');
+        $(`.${$(this).data('content')}`).removeClass('hidden');
     }); 
    
 });
