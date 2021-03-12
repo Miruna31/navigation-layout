@@ -195,7 +195,7 @@ input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     height: 50px;
 }
 
-#save-button{
+#save-button, #load-button{
     background-color: #231f20;
     color: #f8f5f2;
     border: none;
@@ -204,6 +204,7 @@ input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     font-weight: bold;
     font-size: 12px;
     margin-bottom: 30px;
+    cursor: pointer;
 }
 
 .black-containers{
@@ -422,4 +423,26 @@ input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 
 .reward-detail div:first-of-type{
     font-size: 17px;
+}
+
+/* stores location */
+
+.locations-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.city-store-location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 40px;
+    background-color:#231f20;
+    color: white;
+    margin: 10px 15px 5px 0px;
+}
+
+.country-store-location{
+    padding-left: 3px;
 }
