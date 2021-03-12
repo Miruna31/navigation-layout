@@ -21,8 +21,21 @@ $(function() {
 
 
     const locationsWrapper= $('.content-wrappers').find('.locations-wrapper');
-    $('#load-button').click(function(){
-        locationsWrapper.text('Loading...');
+    const loaderOverlay = $('main').find('#loaderOverlay');
+    const modalOverlay =  $('main').find('#modalOverlay');
+
+    $('#load-button').click(function(e){
+        e.preventDefault();
+        loaderOverlay.removeClass('hidden');
+    
+        setTimeout(function() {
+            loaderOverlay.addClass('hidden');
+            modalOverlay.removeClass('hidden');
+
+            setTimeout(function() {
+                modalOverlay.addClass('hidden');
+            }, 2000);
+        }, 2000);
 
         $.ajax({
             type:'GET',
