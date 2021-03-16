@@ -34,7 +34,7 @@ $(function() {
 
             setTimeout(function() {
                 modalOverlay.addClass('hidden');
-            }, 2000);
+            }, 5000);
         }, 2000);
 
         $.ajax({
@@ -43,7 +43,7 @@ $(function() {
             
             success:function(data) {
                 locationsWrapper.html('');
-                for(let i = 0; i < 20; i++) {
+                for(let i = 0; i < data.results.length; i++) {
                     let result = data.results[i];
                     console.log('result: ', result);
                     let location= `<div class="city-store-location">${result.city} Store in 
@@ -59,4 +59,9 @@ $(function() {
             dataType: 'jsonp'
         });
     });
+
+    const menuIconClose = $('.modal-wrapper').find('#menu-icon-close');
+    menuIconClose.click(function(){
+        modalOverlay.addClass('hidden');
+    }); 
 });
