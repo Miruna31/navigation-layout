@@ -46,7 +46,7 @@ $(function() {
                 for(let i = 0; i < data.results.length; i++) {
                     let result = data.results[i];
                     console.log('result: ', result);
-                    let location= `<div class="city-store-location">${result.city} Store in 
+                    let location= `<div class="city-store-location">${result.city} County in 
                                         <span class="country-store-location">${result.localized_country_name}</span>
                                     </div>`;
                     locationsWrapper.append(location);
