@@ -64,4 +64,23 @@ $(function() {
     menuIconClose.click(function(){
         modalOverlay.addClass('hidden');
     }); 
+
+    $(function() {
+        const galleryItems = $('.gallery').find('.also-wrapper');
+        const overlay =$('.also-order').find('.overlay-gallery');
+        const imgWrapper = $('.overlay-gallery').find('.img-overlay-wrapper');
+    
+        galleryItems.click(function() {
+            imgWrapper.css({backgroundImage: "url(assets/product-1/" + $(this).data('img') + ")"});
+            overlay.fadeIn();
+        });
+    
+        imgWrapper.click(function(e) {
+            e.stopPropagation();
+        });
+    
+        overlay.click(function() {
+            $(this).fadeOut();
+        });
+    });
 });
