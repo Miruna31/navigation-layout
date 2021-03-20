@@ -66,11 +66,11 @@ $(function() {
     }); 
 
     $(function() {
-        const galleryItems = $('.gallery').find('.also-wrapper');
+        const alsoItems = $('.gallery').find('.also-wrapper');
         const overlay =$('.also-order').find('.overlay-gallery');
         const imgWrapper = $('.overlay-gallery').find('.img-overlay-wrapper');
     
-        galleryItems.click(function() {
+        alsoItems.click(function() {
             imgWrapper.css({backgroundImage: "url(assets/product-1/" + $(this).data('img') + ")"});
             overlay.fadeIn();
         });
@@ -83,4 +83,5 @@ $(function() {
             $(this).fadeOut();
         });
     });
+    
 });

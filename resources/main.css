@@ -553,7 +553,7 @@ input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     bottom: 0;
     right: 0;
     left: 0;
-    background: rgba(0, 0, 0, .6);
+    background: rgba(0, 0, 0, .7);
     display: none;
 }
 
@@ -568,7 +568,7 @@ input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 .img-overlay-wrapper {
     width: 550px;
     height: 400px;
-    background-color: #fff;
+    /* background-color: #fff; */
     background-repeat: no-repeat;
     background-size: cover;
 }
